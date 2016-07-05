@@ -20,7 +20,7 @@ RUN sudo apt-get -y install mesos marathon
 
 #Update slave configuration to specify the use of the Docker containerizer
 RUN echo 'docker,mesos' > /etc/mesos-slave/containerizers
-RUN echo '5mins' > /etc/mesos-slave/executor_registration_timeout
+RUN echo '30mins' > /etc/mesos-slave/executor_registration_timeout
 
 USER root
 
